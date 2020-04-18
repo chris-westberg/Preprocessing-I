@@ -1,1 +1,295 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+.h1 {
+  font-size: 5rem;
+  text-transform: uppercase;
+  color: lime;
+}
+@keyframes colorchange {
+  from {
+    color: black;
+  }
+  to {
+    color: blue;
+  }
+}
+.flex {
+  display: flex;
+}
+.h2 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: #66ff66;
+}
+html {
+  height: 100%;
+  background-color: grey;
+  font-size: 67.5%;
+}
+@media (max-width: 500px) {
+  html .headerClass {
+    width: 100%;
+  }
+  html .headerClass h1 {
+    text-align: center;
+    line-height: 1;
+  }
+  html .headerClass .navLinks {
+    margin: auto;
+    flex-direction: column;
+  }
+  html .bodyClass {
+    flex-direction: column;
+    justify-content: center;
+  }
+  html .skillsClass ul {
+    line-height: 0;
+    flex-direction: column;
+  }
+}
+html body {
+  height: 100%;
+  margin: 1rem;
+  padding: 2rem;
+}
+.headerClass {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  line-height: 2;
+  justify-content: center;
+  align-items: center;
+}
+.headerClass h1 {
+  font-size: 5rem;
+  text-transform: uppercase;
+  color: lime;
+}
+.headerClass .navLinks {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem;
+}
+.headerClass .navLinks a {
+  border: 2pt solid brown;
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+  background-color: goldenrod;
+  padding: 0.5rem;
+  margin: 1rem;
+  width: 100%;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.headerClass .navLinks a:hover {
+  color: pink;
+  border: 2pt solid #6699ff;
+}
+.bodyClass {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.bodyClass img {
+  width: 26rem;
+}
+.bodyClass .bodyWords {
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.bodyClass .bodyWords h2 {
+  font-size: 1.8rem;
+}
+.bodyClass .bodyWords p {
+  text-align: justify;
+  font-size: 1.7rem;
+  margin: 1.5rem;
+}
+.skillsClass {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 2rem;
+}
+.skillsClass h2 {
+  font-size: 2.5rem;
+}
+.skillsClass ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: disc;
+  justify-content: space-evenly;
+  line-height: 2;
+}
+.skillsClass ul li {
+  color: maroon;
+  font-size: 2.3rem;
+  margin: 2rem;
+}
+.footerClass {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  margin: 2rem;
+}
+.footerClass h2 {
+  font-size: 1.5rem;
+}
+.footerClass div form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.footerClass div form .inputClass {
+  display: flex;
+}
+.footerClass div form .inputClass input {
+  width: 33%;
+  height: 3rem;
+  margin: 1rem;
+}
+.footerClass div form textarea {
+  height: 20rem;
+  margin: 1rem;
+  width: 100%;
+}

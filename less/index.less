@@ -53,7 +53,173 @@ table {
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+// Mix-ins & Animations://
+.h1 {
+	font-size: 5rem;
+	text-transform: uppercase;
+	color: @color2;
 }
+
+@keyframes colorchange {
+	from {color: black;}
+	to {color: blue;}
+}
+
+.flex {
+	display: flex;
+}
+
+.h2 {
+	font-size: 3rem;
+	text-transform: uppercase;
+	color: lighten(@color2, 20%)
+}
+
+// Variables://
+@color1: forestgreen;
+@color2: lime;
+
+html {
+	height: 100%;
+	background-color: grey;
+	font-size: 67.5%;
+	@import "media";
+	
+	body {
+		height: 100%;
+		margin: 1rem;
+		padding: 2rem;
+	}
+}
+
+.headerClass {
+	.flex();
+	flex-direction: column;
+	margin: auto;
+	line-height: 2;
+	justify-content: center;
+	align-items: center;
+
+	h1 {
+		.h1();
+	}
+
+	.navLinks {
+		width: 100%;
+		display: flex;
+		justify-content: space-around;
+		margin: 1rem;
+	
+
+		a {
+			border: 2pt solid brown;
+			border-radius: 10px;
+			text-decoration: none;
+			color: white;
+			background-color: goldenrod;
+			padding: .5rem;
+			margin: 1rem;
+			width: 100%;
+			text-transform: uppercase;
+			text-align: center;
+			font-size: 1.5rem;
+			&:hover {
+				color: pink;
+				border: 2pt solid #6699ff;
+			}
+			
+		}
+
+	}
+
+}
+
+.bodyClass {
+	.flex();
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+
+	img {
+		width: 26rem;
+
+	}
+
+	.bodyWords {
+		max-height: 100%;
+		.flex();
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		h2 {
+			font-size: 1.8rem;
+		}
+		
+		p {
+			text-align: justify;
+			font-size: 1.7rem;
+			margin: 1.5rem;
+		}
+
+	}
+}
+
+.skillsClass {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin: 2rem;
+	h2 {
+		font-size: 2.5rem;
+	}
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		list-style-type: disc;
+		justify-content: space-evenly;
+		line-height: 2;
+		li {
+			color:maroon;
+			font-size: 2.3rem;
+			margin: 2rem;
+		}
+	}
+}
+
+.footerClass {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-direction: column;
+	margin: 2rem;
+	h2 {
+		font-size: 1.5rem;
+	}
+	div {
+		form {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			flex-wrap: wrap;
+			.inputClass {
+				display: flex;
+				input {
+					width: 33%;
+					height: 3rem;
+					margin: 1rem;
+				}
+			}
+			textarea {
+				height: 20rem;
+				margin: 1rem;
+				width: 100%;
+			}
+
+		}
+	}
+}
+
+
 
